@@ -5,7 +5,7 @@ import sun.misc.Unsafe;
 import java.lang.reflect.Field;
 
 /**
- * 本机直接内存溢出.
+ * 本机直接内存溢出(通过反射获取rt.jar下的Unsafe类进行内存分配).
  * 由DirectMemory导致的内存溢出，一个明显的特征是在Heap Dump文件中不会看见明显的异常，
  * 如果发现OOM之后Dump文件很小，而程序中又直接或间接使用了NIO，那就可以考虑检查一下是不是这
  * 方面的原因。
